@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>Going to iterate the loop elements</h1>
+	<h1 th:text="${names}"></h1>
+	
+	<ol>
+		<l1 th:each="n,status : ${names}">
+			<span th:style="${status.even}?'color:red':' ' " th:text="${status.index}+' '+${n}"></span>
+		</l1>
+	</ol>
+	
+</body>
+</html>

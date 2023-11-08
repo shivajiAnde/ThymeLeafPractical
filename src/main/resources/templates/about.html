@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>About Learn Code with Durgesh</h1>
+	<h1>Im shivaji learning thymeleaf</h1>
+	
+	<h1 th:text="${ #strings.toUpperCase(name)}"></h1>
+	<h1 th:text="${currentDate}"></h1>
+	
+	<div th:with="a=5,b=25 n=${name }">
+		<h1 th:text="'value of a is'+${a}"></h1>
+		<h1 th:text="'value of a' +${a}+' and b is'+${b}"></h1>
+		<h1 th:text="'name of the person is '+${n}"></h1>
+		<h1 th:text="'sum of a and b is '+${a+b} "></h1>
+	</div>
+</body>
+</html>
